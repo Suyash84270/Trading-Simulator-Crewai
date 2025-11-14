@@ -63,132 +63,119 @@ engineering_team/
 └── README.md
 
 
-
-
-
-
 ---
 
 ## Techniques & Tools Used
 
-- **AI Agents (crewAI)** – Automates design, coding, frontend, and testing  
-- **Python 3.10–3.13** – Backend implementation  
-- **Gradio** – Interactive frontend for demonstration  
-- **Unit Testing** – Ensures backend reliability  
-- **Multi-Agent Workflow** – Sequential agent execution simulating a software team  
+- **AI Agents (crewAI)** – Auto-generates design, backend, UI, tests  
+- **Python 3.10–3.13**  
+- **Gradio** – Interactive UI layer  
+- **Unit Testing** for backend validation  
+- **Sequential Multi-Agent Workflow**  
 
 ---
 
 ## Installation
 
-**Prerequisites:** Python 3.10–3.13  
+### **Prerequisites:**  
+Python 3.10–3.13
 
-1. Install `uv` for dependency management:
+### Install `uv` dependency manager:
 
-```bash
+\`\`\`bash
 pip install uv
+\`\`\`
 
-
-
-
-
+---
 
 ## Running the Project
 
- ### Run the full multi-agent workflow:
+### **Run the full multi-agent workflow**  
+This will execute design → backend → frontend → testing:
 
- --This will generate:
+\`\`\`bash
+python main.py
+\`\`\`
 
--accounts.py_designed.md → Backend design
+This generates:
 
--accounts.py → Python module for trading account management
+- `accounts.py_designed.md`  
+- `accounts.py`  
+- `app.py`  
+- `test_accounts.py`  
 
--app.py → Gradio frontend
+---
 
--test_accounts.py → Unit tests
+### **Launch the Gradio Frontend**
 
+\`\`\`bash
+python output/app.py
+\`\`\`
 
-
-
-
+---
 
 ## Features
 
-### Backend (accounts.py)
+### **Backend (`accounts.py`)**
+- Account creation with initial deposit  
+- Deposit & withdrawal handling  
+- Buy/sell shares (AAPL, TSLA, GOOGL)  
+- Portfolio value & profit/loss calculation  
+- Transaction history logging  
 
--Account creation with initial deposit
+### **Frontend (`app.py`)**
+- Built using Gradio  
+- Clean, simple UI  
+- Allows: create account, deposit, withdraw, buy, sell  
+- Displays: holdings, profit/loss, portfolio value  
 
--Deposit and withdrawal handling
+---
 
--Buy/sell shares (AAPL, TSLA, GOOGL)
-
--Track portfolio value and profit/loss
-
--List transaction history
-
-### Frontend (app.py)
-
--Built with Gradio for a simple, interactive UI
-
--Demo user actions: deposit, withdraw, buy/sell shares
-
--View portfolio, holdings, P/L, and transactions
-
-
-
-
-
-
-# AI Agent Roles
+## AI Agent Roles
 
 | Agent             | Role                    | Task          |
-| ----------------- | ----------------------- | ------------- |
-| Engineering Lead  | Design backend          | design_task   |
-| Backend Engineer  | Implement Python module | code_task     |
-| Frontend Engineer | Build Gradio UI         | frontend_task |
-| Test Engineer     | Write unit tests        | test_task     |
+|------------------|--------------------------|---------------|
+| Engineering Lead  | Design backend           | design_task   |
+| Backend Engineer  | Implement Python module  | code_task     |
+| Frontend Engineer | Build Gradio UI          | frontend_task |
+| Test Engineer     | Write unit tests         | test_task     |
 
-
-
+---
 
 ## Screenshots / Demo
 
-![App Screenshot](assets/images/screenshot.png):
+> Replace with your actual images:
+
+![App Screenshot](assets/screenshot.png)
 
 
 
+---
 
 ## Hugging Face Space
 
-### Run the live demo without setup:
-[Trading Simulator Demo](https://huggingface.co/spaces/suyashsharma/trading-simulator)
+Run the live demo instantly:  
+**https://huggingface.co/spaces/suyashsharma/trading-simulator**
 
-
+---
 
 ## Customization
 
--Update agents.yaml to change agent roles or goals
+- Modify `agents.yaml` → edit agent roles & prompts  
+- Modify `tasks.yaml` → change tasks  
+- Update `crew.py` → update orchestration  
+- Extend `accounts.py` → add advanced trading logic  
 
--Update tasks.yaml to adjust tasks
+---
 
--Modify crew.py to customize agent orchestration
+## Learning Outcomes
 
--Extend accounts.py to add more trading features
+- Build a **multi-agent AI-driven development pipeline**  
+- Understand the full cycle: design → backend → UI → testing  
+- Learn Gradio-based UI development  
+- Learn agent collaboration strategies  
 
-
-##Learning Outcomes
-
--Build a multi-agent AI workflow to implement a full application
-
--Experience the design → implementation → frontend → testing cycle
-
--Learn Gradio for interactive frontend demos
-
--Understand AI collaboration for software development
-
-
-
-
+---
 
 ## License
 

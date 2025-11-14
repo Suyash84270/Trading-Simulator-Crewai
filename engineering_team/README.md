@@ -153,7 +153,8 @@ pip install uv
 
 ## Screenshots / Demo
 
-![App Screenshot](assets/images/screenshot.png):
+![App Screenshot](assets/images/screenshot.png):<img width="1217" height="815" alt="Screenshot 2025-11-13 134117" src="https://github.com/user-attachments/assets/924ef9fa-15a4-44b2-9009-8fe03e0ac933" />
+
 
 
 
